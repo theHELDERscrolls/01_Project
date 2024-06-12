@@ -1,0 +1,99 @@
+:root {
+    --color-primary: white;
+    --color-secondary: rgb(187, 45, 51);
+    --color-background: black;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+}
+
+header {
+    border: 2px solid red;
+    padding: 0.5rem;
+    width: 100vw;
+    height: auto;
+}
+
+nav {
+    border: 2px solid greenyellow;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 10rem 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.principal,
+.secondary,
+.social,
+.logo {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+        color: var(--color-primary);
+    }
+}
+
+.principal {
+    border: 2px solid indigo;
+    width: 100%;
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    gap: 3rem;
+    justify-content: end;
+    padding-right: 1rem;
+}
+
+.secondary {
+    border: 2px solid indigo;
+    width: 100%;
+    height: 100%;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    gap: 3rem;
+    justify-content: start;
+    padding-left: 1rem;
+}
+
+.social {
+    border: 2px solid blue;
+    width: 100%;
+    height: 100%;
+    grid-column: 3/4;
+    grid-row: 1/2;
+    gap: 2rem;
+    align-items: center;
+    justify-content: end;
+    padding-right: 1rem;
+
+    img {
+        width: 1.2rem;
+        filter: grayscale(1);
+    }
+}
+
+.logo {
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    filter: invert(1);
+}
