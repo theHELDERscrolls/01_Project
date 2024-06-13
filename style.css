@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Medula+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap");
 
 :root {
     --color-primary: white;
     --color-secondary: #f90000;
     --color-background: black;
+    --font-title: "UnifrakturMaguntia", cursive;
 }
 
 * {
@@ -174,7 +176,7 @@ nav {
     }
 
     .menu {
-        width: 2rem;
+        width: 1.5rem;
         filter: invert(1);
     }
 }
@@ -184,10 +186,6 @@ nav {
 main {
     a {
         text-decoration: none;
-    }
-
-    img {
-        width: 5rem;
     }
 }
 
@@ -200,7 +198,6 @@ main {
 }
 
 .subscribe {
-    border: 2px solid yellow;
     width: 100%;
     height: auto;
     margin-top: -10rem;
@@ -250,6 +247,148 @@ main {
             background-color: var(--color-secondary);
             color: var(--color-background);
             transform: scale(1.1);
+        }
+    }
+}
+
+.store {
+    padding: 1rem;
+    margin-top: 2.5rem;
+    width: 100%;
+    height: auto;
+
+    h3 {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 4rem;
+        font-family: var(--font-title);
+    }
+
+    ul {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+        grid-template-rows: auto-fit, minmax(200px, 200px);
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        background-image: url(./assets/images/backgroundimg.webp);
+        background-position: center;
+        background-attachment: fixed;
+
+        li {
+            padding: 1rem;
+            width: 100%;
+            background: rgba(74, 74, 74, 0.5);
+            box-shadow: 5px 5px 5px #9004;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+            gap: 1rem;
+
+            h4 {
+                font-size: 2rem;
+            }
+
+            img {
+                width: 13rem;
+                filter: drop-shadow(2px 2px 2px grey);
+            }
+
+            p {
+                color: var(--color-secondary);
+                font-size: 1.5rem;
+                text-shadow: 2px 2px 2px #0009;
+            }
+        }
+
+        a {
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            background-color: var(--color-background);
+            color: var(--color-primary);
+            border-radius: 10px;
+            padding: 0.3rem 1.5rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+            border: 2px solid var(--color-secondary);
+            background-color: rgb(18, 18, 18);
+            color: var(--color-secondary);
+        }
+    }
+}
+
+.tour {
+    width: 100%;
+    height: auto;
+
+    h3 {
+        text-align: center;
+        padding: 1rem;
+        font-size: 4rem;
+        font-family: var(--font-title);
+    }
+
+    ul {
+        padding: 1rem;
+        background-image: url(/assets/images/concert_background.jpg);
+        background-position: center;
+        background-attachment: fixed;
+
+        li {
+            margin: 2rem 10%;
+            padding: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            align-content: center;
+            justify-items: center;
+            justify-content: center;
+            background: rgba(74, 74, 74, 0.5);
+            box-shadow: 5px 5px 5px #9004;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+
+            .date,
+            .event,
+            .city {
+                font-size: 2rem;
+                width: 100%;
+            }
+
+            .event {
+                font-style: italic;
+                color: var(--color-secondary);
+                text-shadow: 2px 2px 2px #0009;
+            }
+
+            a {
+                width: 50%;
+                text-align: center;
+                border: 2px solid rgba(255, 255, 255, 0.5);
+                background-color: var(--color-background);
+                color: var(--color-primary);
+                border-radius: 10px;
+                padding: 0.3rem 1rem;
+                transition: all 0.3s ease-in-out;
+            }
+            a:hover {
+                transform: scale(1.1);
+                border: 2px solid var(--color-secondary);
+                background-color: rgb(18, 18, 18);
+                color: var(--color-secondary);
+            }
         }
     }
 }
